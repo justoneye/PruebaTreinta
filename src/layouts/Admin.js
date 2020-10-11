@@ -28,6 +28,8 @@ import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
+import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
+
 import routes from "routes.js";
 
 var ps;
@@ -59,39 +61,66 @@ class Dashboard extends React.Component {
   handleColorClick = (color) => {
     this.setState({ backgroundColor: color });
   };
+
   render() {
     return (
       <div className="wrapper">
         <div className="main-panel" ref={this.mainPanel}>
-
+        <div>
         Treinta - ¡Aplicación financiera gratuita!
-Gestiona las transacciones de tu negocio, conoce la utilidad de tu negocio en cualquier momento y registra y cobra deudas 3 veces más eficazmente.
-Ayuda a tu negocio a crecer más con Treinta, la aplicación financiera gratuita. ¡Treinta es gratis, seguro y fácil de usar!
-
+        Gestiona las transacciones de tu negocio, conoce la utilidad de tu negocio en cualquier momento y registra y cobra deudas 3 veces más eficazmente.
+        Ayuda a tu negocio a crecer más con Treinta, la aplicación financiera gratuita. ¡Treinta es gratis, seguro y fácil de usar!
+        </div>
         La contabilidad de tu negocio en tu mano
-          Registra todas las ventas y gastos
-          Registra los ingresos, los gastos y las cuentas por cobrar y pagar
 
-          Visualiza la utilidad del negocio al instante
-          Obtén información diaria, semanal y mensual de la utilidad del negocio
+        <Card style={{width: '33%'}}>
+          <CardImg top src="img-src" alt="..."/>
+            <CardBody>
+              <CardTitle>Registra todas las ventas y gastos</CardTitle>
+              <CardText>Registra los ingresos, los gastos y las cuentas por cobrar y pagar</CardText>
+          </CardBody>
+        </Card>
 
-          Cobra puntualmente la deuda de tus clientes
-          Obtén pagos de las deudas de tus clientes más rápido con el registro de deudas pendientes
+        <Card style={{width: '33%'}}>
+          <CardImg top src="img-src" alt="..."/>
+            <CardBody>
+              <CardTitle>Visualiza la utilidad del negocio al instante</CardTitle>
+              <CardText>Obtén información diaria, semanal y mensual de la utilidad del negocio</CardText>
+          </CardBody>
+        </Card>
 
-          
-Recuerda cuando pagar a proveedores y acreedores
-Visualiza las fechas de vencimiento de tus facturas y recibos
+        <Card style={{width: '33%'}}>
+          <CardImg top src="img-src" alt="..."/>
+            <CardBody>
+              <CardTitle>Cobra puntualmente la deuda de tus clientes</CardTitle>
+              <CardText>Obtén pagos de las deudas de tus clientes más rápido con el registro de deudas pendientes</CardText>
+          </CardBody>
+        </Card>
 
-Los datos se mantienen seguros
-Las cuentas por cobrar son muy importantes, no las pierda. Con Treinta, los registros se mantienen seguros.
+        <Card style={{width: '33%'}}>
+          <CardImg top src="img-src" alt="..."/>
+            <CardBody>
+              <CardTitle>Recuerda cuando pagar a proveedores y acreedores</CardTitle>
+              <CardText>Visualiza las fechas de vencimiento de tus facturas y recibos</CardText>
+          </CardBody>
+        </Card>    
+        
+        <Card style={{width: '33%'}}>
+          <CardImg top src="img-src" alt="..."/>
+            <CardBody>
+              <CardTitle>Los datos se mantienen seguros</CardTitle>
+              <CardText>Las cuentas por cobrar son muy importantes, no las pierda. Con Treinta, los registros se mantienen seguros.</CardText>
+          </CardBody>
+        </Card>     
+        <div>
+          Gratis, seguro y fácil
 
-Gratis, seguro y fácil
+          ¡Simplifica tu negocio!
+          Monitorear las finanzas de tu negocio nunca ha sido tan fácil.
+          Con solo un smartphone y la aplicación Treinta
 
-¡Simplifica tu negocio!
-Monitorear las finanzas de tu negocio nunca ha sido tan fácil.
-Con solo un smartphone y la aplicación Treinta
-
-Registrate o Inicia sesión 
+          Registrate o Inicia sesión 
+        </div>
           <Switch>
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
