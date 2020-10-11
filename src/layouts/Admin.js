@@ -58,9 +58,6 @@ class Dashboard extends React.Component {
       this.mainPanel.current.scrollTop = 0;
     }
   }
-  handleColorClick = (color) => {
-    this.setState({ backgroundColor: color });
-  };
 
   render() {
     return (
