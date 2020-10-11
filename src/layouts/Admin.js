@@ -64,11 +64,12 @@ class Dashboard extends React.Component {
       <div className="wrapper">
         <div className="main-panel" ref={this.mainPanel}>
         <div>
-        Treinta - ¡Aplicación financiera gratuita!
-        Gestiona las transacciones de tu negocio, conoce la utilidad de tu negocio en cualquier momento y registra y cobra deudas 3 veces más eficazmente.
-        Ayuda a tu negocio a crecer más con Treinta, la aplicación financiera gratuita. ¡Treinta es gratis, seguro y fácil de usar!
+          <h1>Treinta - ¡Aplicación financiera gratuita!</h1>
+          <h6>Gestiona las transacciones de tu negocio, conoce la utilidad de tu negocio en cualquier momento y registra y cobra deudas 3 veces más eficazmente.</h6>
+          <h6>Ayuda a tu negocio a crecer más con Treinta, la aplicación financiera gratuita. ¡Treinta es gratis, seguro y fácil de usar!</h6>
         </div>
-        La contabilidad de tu negocio en tu mano
+        
+        <h4>La contabilidad de tu negocio en tu mano</h4>
 
         <Card style={{width: '33%'}}>
           <CardImg top src="img-src" alt="..."/>
@@ -110,10 +111,12 @@ class Dashboard extends React.Component {
           </CardBody>
         </Card>     
         <div>
-          Gratis, seguro y fácil
-
+          <h4>Gratis, seguro y fácil</h4>
+         
           ¡Simplifica tu negocio!
+          <br/>
           Monitorear las finanzas de tu negocio nunca ha sido tan fácil.
+          <br/>
           Con solo un smartphone y la aplicación Treinta
 
           Registrate o Inicia sesión 
