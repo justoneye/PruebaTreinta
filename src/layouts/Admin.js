@@ -16,6 +16,7 @@
 
 */
 import React from "react";
+
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 
@@ -23,12 +24,8 @@ import PerfectScrollbar from "perfect-scrollbar";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import Footer from "components/Footer/Footer.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
-
-import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 
 import routes from "routes.js";
 
@@ -109,7 +106,12 @@ class Dashboard extends React.Component {
               <CardTitle>Los datos se mantienen seguros</CardTitle>
               <CardText>Las cuentas por cobrar son muy importantes, no las pierda. Con Treinta, los registros se mantienen seguros.</CardText>
           </CardBody>
-        </Card>     
+        </Card>
+        <div>
+          Gracias Bogotá por darnos tan cálida bienvenida, aquí puedes encontrarnos 
+          <br/>
+          <Button>Nuestros aliados</Button> 
+        </div>     
         <div>
           <h4>Gratis, seguro y fácil</h4>
          
@@ -118,8 +120,8 @@ class Dashboard extends React.Component {
           Monitorear las finanzas de tu negocio nunca ha sido tan fácil.
           <br/>
           Con solo un smartphone y la aplicación Treinta
-
-          Registrate o Inicia sesión 
+          <br/>
+          <Button>Registrate</Button> o <Button>Inicia sesión</Button> 
         </div>
           <Switch>
             <Redirect from="/admin" to="/admin/dashboard" />
