@@ -16,13 +16,9 @@
 
 */
 import React from "react";
+
 // react plugin used to create google maps
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker,} from "react-google-maps";
 
 // reactstrap components
 import { Row, Col, Card, CardHeader, CardBody } from "reactstrap";
@@ -34,7 +30,7 @@ const MapWrapper = withScriptjs(
   withGoogleMap((props) => (
     <GoogleMap
       defaultZoom={13}
-      defaultCenter={{ lat: 40.748817, lng: -73.985428 }}
+      defaultCenter={{ lat: 4.5986544, lng: -74.0769012 }}
       defaultOptions={{
         scrollwheel: false,
         styles: [
