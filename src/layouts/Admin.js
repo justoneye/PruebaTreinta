@@ -62,31 +62,12 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Sidebar
-          {...this.props}
-          routes={routes}
-          backgroundColor={this.state.backgroundColor}
-        />
         <div className="main-panel" ref={this.mainPanel}>
-          <DemoNavbar {...this.props} />
           <Switch>
-            {routes.map((prop, key) => {
-              return (
-                <Route
-                  path={prop.layout + prop.path}
-                  component={prop.component}
-                  key={key}
-                />
-              );
-            })}
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
           <Footer fluid />
         </div>
-        <FixedPlugin
-          bgColor={this.state.backgroundColor}
-          handleColorClick={this.handleColorClick}
-        />
       </div>
     );
   }
