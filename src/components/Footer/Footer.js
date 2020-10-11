@@ -35,7 +35,7 @@ class Footer extends React.Component {
                   href="https://www.creative-tim.com?ref=nudr-footer"
                   target="_blank"
                 >
-                  Creative Tim
+                  Treinta
                 </a>
               </li>
               <li>
@@ -57,17 +57,17 @@ class Footer extends React.Component {
             </ul>
           </nav>
           <div className="copyright">
-            &copy; {1900 + new Date().getYear()}, Designed by{" "}
+            &copy; {1900 + new Date().getYear()}, Hecho por{" "}
             <a
-              href="https://www.invisionapp.com"
+              href="https://www.linkedin.com/in/pilarcamargo/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Invision
+              Pilar Camargo Márquez
             </a>
-            . Coded by{" "}
+            . Plantilla "Now UI Dashboard React" por {" "}
             <a
-              href="https://www.creative-tim.com?ref=nudr-footer"
+              href="https://www.creative-tim.com/product/now-ui-dashboard-react"
               target="_blank"
               rel="noopener noreferrer"
             >
