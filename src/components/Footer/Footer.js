@@ -32,7 +32,7 @@ class Footer extends React.Component {
             <ul>
               <li>
                 <a
-                  href="https://www.creative-tim.com?ref=nudr-footer"
+                  href="https://www.treinta.co/"
                   target="_blank"
                 >
                   Treinta
