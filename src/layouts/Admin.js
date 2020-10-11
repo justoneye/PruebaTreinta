@@ -63,6 +63,35 @@ class Dashboard extends React.Component {
     return (
       <div className="wrapper">
         <div className="main-panel" ref={this.mainPanel}>
+
+        Treinta - ¡Aplicación financiera gratuita!
+Gestiona las transacciones de tu negocio, conoce la utilidad de tu negocio en cualquier momento y registra y cobra deudas 3 veces más eficazmente.
+Ayuda a tu negocio a crecer más con Treinta, la aplicación financiera gratuita. ¡Treinta es gratis, seguro y fácil de usar!
+
+        La contabilidad de tu negocio en tu mano
+          Registra todas las ventas y gastos
+          Registra los ingresos, los gastos y las cuentas por cobrar y pagar
+
+          Visualiza la utilidad del negocio al instante
+          Obtén información diaria, semanal y mensual de la utilidad del negocio
+
+          Cobra puntualmente la deuda de tus clientes
+          Obtén pagos de las deudas de tus clientes más rápido con el registro de deudas pendientes
+
+          
+Recuerda cuando pagar a proveedores y acreedores
+Visualiza las fechas de vencimiento de tus facturas y recibos
+
+Los datos se mantienen seguros
+Las cuentas por cobrar son muy importantes, no las pierda. Con Treinta, los registros se mantienen seguros.
+
+Gratis, seguro y fácil
+
+¡Simplifica tu negocio!
+Monitorear las finanzas de tu negocio nunca ha sido tan fácil.
+Con solo un smartphone y la aplicación Treinta
+
+Registrate o Inicia sesión 
           <Switch>
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
