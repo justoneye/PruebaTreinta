@@ -65,7 +65,8 @@ class Footer extends React.Component {
             >
               Pilar Camargo Márquez
             </a>
-            . Plantilla "Now UI Dashboard React" por {" "}
+            . 
+            <br/>Plantilla "Now UI Dashboard React" por {" "}
             <a
               href="https://www.creative-tim.com/product/now-ui-dashboard-react"
               target="_blank"

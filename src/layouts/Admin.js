@@ -121,7 +121,9 @@ class Dashboard extends React.Component {
           <br/>
           Con solo un smartphone y la aplicación Treinta
           <br/>
-          <Button>Registrate</Button> o <Button>Inicia sesión</Button> 
+          <Button>Registrate</Button>
+          <br/>
+          ¿Ya tienes una cuenta? <Button>Inicia sesión</Button> 
         </div>
           <Switch>
             <Redirect from="/admin" to="/admin/dashboard" />

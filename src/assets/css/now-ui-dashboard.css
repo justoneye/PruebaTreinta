@@ -2115,7 +2115,6 @@ Created using IcoMoon - icomoon.io
   display: inline-block;
   font: normal normal normal 14px/1 'Nucleo Outline';
   font-size: inherit;
-  speak: none;
   text-transform: none;
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
@@ -2985,7 +2984,6 @@ Created using IcoMoon - icomoon.io
     background-color: #f2f2f2; }
   .footer nav {
     display: inline-block;
-    float: left;
     padding-left: 7px; }
   .footer ul {
     margin-bottom: 0;
@@ -3114,7 +3112,6 @@ Created using IcoMoon - icomoon.io
     text-align: center;
     text-transform: uppercase; }
   .fixed-plugin .adjustments-line p {
-    float: left;
     display: inline-block;
     margin-bottom: 0;
     font-size: 1em;
