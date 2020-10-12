@@ -18,21 +18,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Router, Route, Switch } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/now-ui-dashboard.scss?v1.4.0";
 import "assets/css/demo.css";
 
 import AdminLayout from "layouts/Admin.js";
+import IniciarSesion from "layouts/IniciarSesion.js";
 
 const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/" render={(props) => <AdminLayout {...props} />} />
-    </Switch>
-  </Router>,
+  <BrowserRouter>
+    <Router history={hist}>
+      <Switch>
+        <Route path="/" render={(props) => <AdminLayout {...props} />} />
+        <Route path="/iniciarSesion" component={() => <IniciarSesion />} />
+      </Switch>
+    </Router>
+  </BrowserRouter>,
   document.getElementById("root")
 );
