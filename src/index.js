@@ -33,7 +33,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Router history={hist}>
       <Switch>
-        <Route path="/" render={(props) => <AdminLayout {...props} />} />
+        <Route path="/" render={(props) => <AdminLayout/>} />
         <Route path="/iniciarSesion" component={() => <IniciarSesion />} />
       </Switch>
     </Router>
