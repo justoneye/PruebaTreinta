@@ -27,8 +27,6 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Footer from "components/Footer/Footer.js";
 import { Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 
-import routes from "routes.js";
-
 var ps;
 
 class Dashboard extends React.Component {
@@ -122,6 +120,7 @@ class Dashboard extends React.Component {
           Con solo un smartphone y la aplicación Treinta
           <br/>
           <Button>Registrate</Button>
+          <a class="btn btn-primary" href="IniciarSesion.js" role="button">Link</a>
           <br/>
           ¿Ya tienes una cuenta? <Button>Inicia sesión</Button> 
         </div>
