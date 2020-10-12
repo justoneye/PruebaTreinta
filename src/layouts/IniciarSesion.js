@@ -1,154 +1,81 @@
-import React from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import Icon from "@material-ui/core/Icon";
-// @material-ui/icons
-import Email from "@material-ui/icons/Email";
-import People from "@material-ui/icons/People";
-// core components
-import Header from "components/Header/Header.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import Footer from "components/Footer/Footer.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardFooter from "components/Card/CardFooter.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
+import React, { Component } from "react";
+import ReactDOM from 'react-dom'
 
-import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "assets/img/bg7.jpg";
+class IniciarSesion extends Component {
+  render() {
+    return( 
+      <div class="limiter">
+        <div class="container-login100">
+          <div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
+            <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+            <form class="login100-form validate-form">
+              <span class="login100-form-title p-b-59">
+                Sign Up
+              </span>
 
-const useStyles = makeStyles(styles);
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                <span class="label-input100">Full Name</span>
+                    <input class="input100" type="text" name="name" placeholder="Name..."/>
+                <span class="focus-input100"></span>
+                </div>
 
-export default function LoginPage(props) {
-  const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-  setTimeout(function() {
-    setCardAnimation("");
-  }, 700);
-  const classes = useStyles();
-  const { ...rest } = props;
-  return (
-    <div>
-      <Header
-        absolute
-        color="transparent"
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        {...rest}
-      />
-      <div
-        className={classes.pageHeader}
-        style={{
-          backgroundImage: "url(" + image + ")",
-          backgroundSize: "cover",
-          backgroundPosition: "top center"
-        }}
-      >
-        <div className={classes.container}>
-          <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={4}>
-              <Card className={classes[cardAnimaton]}>
-                <form className={classes.form}>
-                  <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
-                    <div className={classes.socialLine}>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-twitter"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-facebook"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-google-plus-g"} />
-                      </Button>
-                    </div>
-                  </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
-                  <CardBody>
-                    <CustomInput
-                      labelText="First Name..."
-                      id="first"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Email..."
-                      id="email"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "email",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Password"
-                      id="pass"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "password",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Icon className={classes.inputIconsColor}>
-                              lock_outline
-                            </Icon>
-                          </InputAdornment>
-                        ),
-                        autoComplete: "off"
-                      }}
-                    />
-                  </CardBody>
-                  <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
-                      Get started
-                    </Button>
-                  </CardFooter>
-                </form>
-              </Card>
-            </GridItem>
-          </GridContainer>
-        </div>
-        <Footer whiteFont />
-      </div>
+                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                <span class="label-input100">Email</span>
+                    <input class="input100" type="text" name="email" placeholder="Email addess..."/>
+                <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Username is required">
+                <span class="label-input100">Username</span>
+                    <input class="input100" type="text" name="username" placeholder="Username..."/>
+                <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                <span class="label-input100">Password</span>
+                    <input class="input100" type="text" name="pass" placeholder="*************"/>
+                <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
+                <span class="label-input100">Repeat Password</span>
+                    <input class="input100" type="text" name="repeat-pass" placeholder="*************"/>
+                <span class="focus-input100"></span>
+                </div>
+
+                <div class="flex-m w-full p-b-33">
+                <div class="contact100-form-checkbox">
+                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me"/>
+                    <label class="label-checkbox100" for="ckb1">
+                        <span class="txt1"> 
+                    I agree to the <a href="#" class="txt2 hov1">Terms of User</a>
+                    </span>
+                    </label>
+                </div>
+
+            <div class="container-login100-form-btn">
+                <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn">
+
+                </div>
+                    <button class="login100-form-btn">
+                    Sign Up
+                    </button>
+                </div>
+
+                <a href="#" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+                    Sign in
+                    <i class="fa fa-long-arrow-right m-l-5"></i>
+                </a>
+			</div>
+          </div>
+		</form>
+		</div>
+	</div>
     </div>
-  );
-}
+    );
+  }
+};
+
+export default IniciarSesion;
