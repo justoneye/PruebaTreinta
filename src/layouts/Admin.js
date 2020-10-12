@@ -17,43 +17,11 @@
 */
 import React from "react";
 
-// javascript plugin used to create scrollbars on windows
-import PerfectScrollbar from "perfect-scrollbar";
-
 // reactstrap components
-import { Route, Switch, Redirect } from "react-router-dom";
-
-// core components
 import Footer from "components/Footer/Footer.js";
 import { Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 
-var ps;
-
 class Dashboard extends React.Component {
-  state = {
-    backgroundColor: "blue",
-  };
-  mainPanel = React.createRef();
-  componentDidMount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      ps = new PerfectScrollbar(this.mainPanel.current);
-      document.body.classList.toggle("perfect-scrollbar-on");
-    }
-  }
-  componentWillUnmount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      ps.destroy();
-      document.body.classList.toggle("perfect-scrollbar-on");
-    }
-  }
-  componentDidUpdate(e) {
-    if (e.history.action === "PUSH") {
-      document.documentElement.scrollTop = 0;
-      document.scrollingElement.scrollTop = 0;
-      this.mainPanel.current.scrollTop = 0;
-    }
-  }
-
   render() {
     return (
       <div className="wrapper">
@@ -64,8 +32,8 @@ class Dashboard extends React.Component {
           <h6>Ayuda a tu negocio a crecer más con Treinta, la aplicación financiera gratuita. ¡Treinta es gratis, seguro y fácil de usar!</h6>
         </div>
         
+        <div>
         <h4>La contabilidad de tu negocio en tu mano</h4>
-
         <Card style={{width: '33%'}}>
           <CardImg top src="img-src" alt="..."/>
             <CardBody>
@@ -105,6 +73,7 @@ class Dashboard extends React.Component {
               <CardText>Las cuentas por cobrar son muy importantes, no las pierda. Con Treinta, los registros se mantienen seguros.</CardText>
           </CardBody>
         </Card>
+        </div>
         <div>
           Gracias Bogotá por darnos tan cálida bienvenida, aquí puedes encontrarnos 
           <br/>
@@ -124,9 +93,6 @@ class Dashboard extends React.Component {
           <br/>
           ¿Ya tienes una cuenta? <Button>Inicia sesión</Button> 
         </div>
-          <Switch>
-            <Redirect from="/admin" to="/admin/dashboard" />
-          </Switch>
           <Footer fluid />
         </div>
       </div>
