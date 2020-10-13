@@ -24,9 +24,6 @@ import IniciarSesion from "layouts/IniciarSesion.js";
 import ModalTest from "layouts/ModalTest.js" 
 import Maps from "layouts/Maps.js" 
 
-// core components
-import PanelHeader from "components/PanelHeader/PanelHeader.js";
-
 class Dashboard extends React.Component {
   render() {
     return (
@@ -81,6 +78,9 @@ class Dashboard extends React.Component {
         <div>
           Gracias Bogotá por darnos tan cálida bienvenida, aquí puedes encontrarnos 
           <br/>
+          <br/>
+          <br/>
+
           <Maps/>
         </div>  
 
