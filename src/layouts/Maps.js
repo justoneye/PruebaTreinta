@@ -23,7 +23,6 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker,} from "react-google-map
 // reactstrap components
 import { Row, Col, Card, CardHeader, CardBody } from "reactstrap";
 
-
 const MapWrapper = withScriptjs(
   withGoogleMap((props) => (
     <GoogleMap
@@ -31,7 +30,7 @@ const MapWrapper = withScriptjs(
       defaultCenter={{ lat: 4.5986544, lng: -74.0769012 }}
       defaultOptions={{
         scrollwheel: false,
-        styles: [
+        /*styles: [
           {
             featureType: "water",
             elementType: "geometry",
@@ -104,14 +103,27 @@ const MapWrapper = withScriptjs(
             elementType: "geometry.stroke",
             stylers: [{ color: "#fefefe" }, { lightness: 17 }, { weight: 1.2 }],
           },
-        ],
+        ],*/
       }}
     >
+      <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
       <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
     </GoogleMap>
   ))
 );
-
+/*
+function iniciarMap(){
+  var coord = {lat:-34.5956145 ,lng: -58.4431949};
+  var map = new google.maps.Map({
+    zoom: 10,
+    center: coord
+  });
+  var marker = new google.maps.Marker({
+    position: coord,
+    map: map
+  });
+}
+*/
 class FullScreenMap extends React.Component {
   render() {
     return (
@@ -122,13 +134,9 @@ class FullScreenMap extends React.Component {
               <Card>
                 <CardHeader>Google Maps</CardHeader>
                 <CardBody>
-                  <div
-                    id="map"
-                    className="map"
-                    style={{ position: "relative", overflow: "hidden" }}
-                  >
+                  <div id="map" className="map" style={{ position: "relative", overflow: "hidden" }}>
                     <MapWrapper
-                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik"
                       loadingElement={<div style={{ height: `100%` }} />}
                       containerElement={<div style={{ height: `100%` }} />}
                       mapElement={<div style={{ height: `100%` }} />}
