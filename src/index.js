@@ -24,7 +24,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/now-ui-dashboard.scss?v1.4.0";
 import "assets/css/demo.css";
 
-import AdminLayout from "layouts/Admin.js";
+import Admin from "layouts/Admin.js";
 import IniciarSesion from "layouts/IniciarSesion.js";
 
 const hist = createBrowserHistory();
@@ -33,7 +33,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Router history={hist}>
       <Switch>
-        <Route path="/" render={(props) => <AdminLayout/>} />
+        <Route path="/" render={(props) => <Admin/>} />
         <Route path="/iniciarSesion" component={() => <IniciarSesion />} />
       </Switch>
     </Router>
