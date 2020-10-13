@@ -20,18 +20,22 @@ import React from "react";
 // reactstrap components
 import Footer from "components/Footer/Footer.js";
 import { Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
+import IniciarSesion from "layouts/IniciarSesion.js";
+import ModalTest from "layouts/ModalTest.js" 
+import Maps from "layouts/Maps.js" 
+
+// core components
+import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 class Dashboard extends React.Component {
   render() {
     return (
-      <div className="wrapper">
         <div className="main-panel" ref={this.mainPanel}>
         <div>
           <h1>Treinta - ¡Aplicación financiera gratuita!</h1>
           <h6>Gestiona las transacciones de tu negocio, conoce la utilidad de tu negocio en cualquier momento y registra y cobra deudas 3 veces más eficazmente.</h6>
           <h6>Ayuda a tu negocio a crecer más con Treinta, la aplicación financiera gratuita. ¡Treinta es gratis, seguro y fácil de usar!</h6>
         </div>
-        
         <div>
         <h4>La contabilidad de tu negocio en tu mano</h4>
         <Card style={{width: '33%'}}>
@@ -77,11 +81,12 @@ class Dashboard extends React.Component {
         <div>
           Gracias Bogotá por darnos tan cálida bienvenida, aquí puedes encontrarnos 
           <br/>
-          <Button>Nuestros aliados</Button> 
-        </div>     
+          <Maps/>
+        </div>  
+
         <div>
           <h4>Gratis, seguro y fácil</h4>
-         
+       
           ¡Simplifica tu negocio!
           <br/>
           Monitorear las finanzas de tu negocio nunca ha sido tan fácil.
@@ -89,13 +94,15 @@ class Dashboard extends React.Component {
           Con solo un smartphone y la aplicación Treinta
           <br/>
           <Button>Registrate</Button>
-          <a class="btn btn-primary" href="IniciarSesion.js" role="button">Link</a>
+          <a class="btn btn-primary" href={ModalTest} role="button">Inicia sesión</a>
           <br/>
-          ¿Ya tienes una cuenta? <Button>Inicia sesión</Button> 
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target={ModalTest}>
+            Launch demo modal
+          </button>
+          ¿Ya tienes una cuenta? 
         </div>
           <Footer fluid />
         </div>
-      </div>
     );
   }
 }
